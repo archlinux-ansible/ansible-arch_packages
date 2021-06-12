@@ -1,0 +1,12 @@
+---
+
+- name: Install reflector
+  pacman:
+    name: reflector
+    state: present
+
+- name: Run reflector
+  shell: "reflector {{ packages__reflector_args }}"
+  changed_when: no
+  become: yes
+  become_user: root

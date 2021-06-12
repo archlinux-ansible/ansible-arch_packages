@@ -1,0 +1,11 @@
+---
+
+- name: Set pacman config
+  template:
+    src: pacman.conf.j2
+    dest: /etc/pacman.conf
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+  become_user: root

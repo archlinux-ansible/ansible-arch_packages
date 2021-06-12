@@ -1,0 +1,152 @@
+---
+
+packages__pacman_conf:
+  options:
+    HoldPkg: pacman glibc
+    XferCommand: /usr/bin/curl -L -C - -f -o %o %u
+    Architecture: auto
+    Color:
+    CheckSpace:
+    ParallelDownloads: 5
+    SigLevel: Required DatabaseOptional
+    LocalFileSigLevel: Optional
+  core:
+    Include: /etc/pacman.d/mirrorlist
+  extra:
+    Include: /etc/pacman.d/mirrorlist
+  community:
+    Include: /etc/pacman.d/mirrorlist
+  multilib:
+    Include: /etc/pacman.d/mirrorlist
+
+packages__reflector: yes
+packages__reflector_args: >-
+  --latest 200
+  --sort rate
+  --protocol http --protocol https
+  --threads {{ ansible_facts.processor_vcpus }}
+  --save /etc/pacman.d/mirrorlist
+
+packages__aur_helper: yes
+packages__aur_helper_pkg: yay
+
+packages__xorg:
+  - xorg-server
+  - xorg-apps
+  - xf86-input-libinput
+  - xorg-xrdb
+  - xorg-xsetroot
+  - xorg-xev
+packages__gpu_amd:
+  - xf86-video-amdgpu
+  - mesa
+  - lib32-mesa
+packages__gpu_intel:
+  - xf86-video-intel
+  - mesa
+  - lib32-mesa
+packages__gpu_nvidia:
+  - nvidia-dkms
+  - nvidia-utils
+  - lib32-nvidia-utils
+  - nvidia-settings
+
+packages__pkgs:
+  # Console tools
+  - git
+  - ncdu
+  - neovim
+  - neovim-plug
+  - gbt
+  - htop
+  - tig
+  - fzf
+  - fzf-extras
+  - zsh
+  - antibody
+  - neofetch
+  - tree
+  - pass
+  - bash-completion
+  - zsh-completions
+  - onefetch
+
+  # sys
+  - docker
+  - docker-compose
+  - skopeo
+  - kubectl
+  - helm
+  - kubeadm
+  - kubectx
+  - remmina
+  - keepassxc
+  - ansible
+  - ansible-lint
+  - aws-cli
+  - jq
+  - iperf3
+  - net-snmp
+  - packer
+  - terraform
+  - pigz
+  - pwgen
+
+  # libs
+  - python-black
+  - python-dnspython
+  - python-flask
+  - python-gitlab
+  - python-hpilo
+  - python-jmespath
+  - python-ntlm-auth
+  - python-pyyaml
+  - python-pykerberos
+  - python-pytest-testinfra
+
+  # dev
+  - git-cola
+  - meld
+  - lazydocker
+  - lazygit
+  - cmake
+  - clang
+  - go
+  - jdk-openjdk
+
+  # WM/DE
+  - sddm
+  - sddm-theme-aerial-git
+  - spectrwm
+  - picom-tryone-git
+  - dunst
+  - xlockmore
+  - feh
+  - alacritty
+  - glava
+  - spicetify-cli
+  - qt5ct
+  - qt5-styleplugins
+
+  # Audio
+  - pipewire
+  - pipewire-pulse
+  - pipewire-jack
+  - helvum
+  - spotify
+
+  # Media
+  - firefox
+  - chromium
+  - google-chrome
+  - flameshot
+  - scrot
+  - playerctl
+  - mumble
+  - teamspeak3
+  - steam
+  - zathura
+  - youtube-dl
+  - mpv
+  - obs-studio
+  - discord

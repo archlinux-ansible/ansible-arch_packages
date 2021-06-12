@@ -1,0 +1,15 @@
+---
+
+ - name: Configure pacman
+   include_tasks: pacman_conf.yaml
+
+ - name: Get best mirrors
+   include_tasks: reflector.yaml
+   when: 
+     - packages__reflector
+
+ - name: Install AUR helper
+   include_tasks: aur_helper.yaml
+
+ - name: Install packages
+   include_tasks: packages.yaml

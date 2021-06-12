@@ -1,0 +1,9 @@
+---
+
+- name: Install AUR helper
+  aur:
+    name: "{{ packages__aur_helper_pkg }}"
+    use: makepkg
+    state: present
+  when:
+    - packages__aur_helper

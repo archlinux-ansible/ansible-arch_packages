@@ -1,0 +1,2 @@
+# {{ ansible_managed }}
+{{ packages__pacman_conf | encode_ini(delimiter=' = ') }}

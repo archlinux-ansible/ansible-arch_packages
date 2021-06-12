@@ -1,0 +1,28 @@
+---
+
+- name: Look for GPUs on PCIe bus
+  shell: "lspci -v -s $(lspci | grep ' VGA ' | cut -d' ' -f 1)"
+  register: gpus_lspci
+  changed_when: no
+
+- name: Check which GPUs are present
+  set_fact:
+    gpu: "{{ 'amd' if 'AMD' in gpus_lspci.stdout else 'intel' if 'Intel' in gpus_lspci.stdout else 'nvidia' if 'NVIDIA' in gpus_lspci.stdout | default('intel') }}"
+
+- name: Install GPU drivers
+  aur:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ lookup('vars', 'packages__gpu_' + gpu) }}"
+
+- name: Install Xorg
+  aur:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages__xorg }}"
+
+- name: Install packages
+  aur:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages__pkgs }}"
