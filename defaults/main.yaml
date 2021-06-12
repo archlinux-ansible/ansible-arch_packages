@@ -150,6 +150,7 @@ packages__pkgs:
   - themix-gui-git
   - themix-theme-oomox-git
   - themix-icons-suru-plus-aspromauros-git
+  - vivid
 
   # Audio
   # - helvum
