@@ -127,6 +127,7 @@ packages__pkgs:
   - jdk-openjdk
 
   # WM/DE
+  - chezmoi
   - sddm
   - sddm-theme-aerial-git
   - spectrwm
