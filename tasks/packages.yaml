@@ -1,5 +1,10 @@
 ---
 
+- name: Install lspci
+  pacman:
+    name: pciutils
+    state: present
+
 - name: Look for GPUs on PCIe bus
   shell: "lspci -v -s $(lspci | grep ' VGA ' | cut -d' ' -f 1)"
   register: gpus_lspci
@@ -7,7 +12,12 @@
 
 - name: Check which GPUs are present
   set_fact:
-    gpu: "{{ 'amd' if 'AMD' in gpus_lspci.stdout else 'intel' if 'Intel' in gpus_lspci.stdout else 'nvidia' if 'NVIDIA' in gpus_lspci.stdout | default('intel') }}"
+    gpu: >-
+      {{
+        'amd' if 'AMD' in gpus_lspci.stdout
+        else 'intel' if 'Intel' in gpus_lspci.stdout
+        else 'nvidia' if 'NVIDIA' in gpus_lspci.stdout | default('intel')
+      }}
 
 - name: Install GPU drivers
   aur:
