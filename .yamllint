@@ -1,0 +1,8 @@
+rules:
+  truthy:
+    check-keys: true
+    allowed-values:
+      - 'true'
+      - 'false'
+      - 'yes'
+      - 'no'

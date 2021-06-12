@@ -1,15 +1,19 @@
 ---
 
- - name: Configure pacman
-   include_tasks: pacman_conf.yaml
+# Run this first to populate mirror lists
+# Otherwise packages will fail to download
+- name: Get best mirrors
+  include_tasks: reflector.yaml
+  when:
+    - packages__reflector
 
- - name: Get best mirrors
-   include_tasks: reflector.yaml
-   when: 
-     - packages__reflector
+# This step sets pacman to use the mirror lists
+# populated by reflector. Needs to run after
+- name: Configure pacman
+  include_tasks: pacman_conf.yaml
 
- - name: Install AUR helper
-   include_tasks: aur_helper.yaml
+- name: Install AUR helper
+  include_tasks: aur_helper.yaml
 
- - name: Install packages
-   include_tasks: packages.yaml
+- name: Install packages
+  include_tasks: packages.yaml

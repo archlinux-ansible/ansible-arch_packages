@@ -6,7 +6,7 @@
     state: present
 
 - name: Look for GPUs on PCIe bus
-  shell: "lspci -v -s $(lspci | grep ' VGA ' | cut -d' ' -f 1)"
+  shell: "set -o pipefail; lspci -v -s $(lspci | grep ' VGA ' | cut -d' ' -f 1)"
   register: gpus_lspci
   changed_when: no
 
@@ -14,25 +14,31 @@
   set_fact:
     gpu: >-
       {{
-        'amd' if 'AMD' in gpus_lspci.stdout
+        ('amd' if 'AMD' in gpus_lspci.stdout
         else 'intel' if 'Intel' in gpus_lspci.stdout
-        else 'nvidia' if 'NVIDIA' in gpus_lspci.stdout | default('intel')
+        else 'nvidia' if 'NVIDIA' in gpus_lspci.stdout) | default('generic')
       }}
 
 - name: Install GPU drivers
-  aur:
-    name: "{{ item }}"
+  pacman:
+    name: "{{ lookup('vars', 'packages__gpu_' + gpu) }}"
     state: present
-  loop: "{{ lookup('vars', 'packages__gpu_' + gpu) }}"
 
 - name: Install Xorg
-  aur:
-    name: "{{ item }}"
+  pacman:
+    name: "{{ packages__xorg }}"
     state: present
-  loop: "{{ packages__xorg }}"
 
 - name: Install packages
   aur:
-    name: "{{ item }}"
+    name: "{{ packages__pkgs }}"
     state: present
-  loop: "{{ packages__pkgs }}"
+  become: yes
+  become_user: aurbuilder
+
+# This is horribly hacky, but --noconfirm auto-fails
+- name: Install pipewire
+  # yamllint disable-line rule:command-instead-of-shell
+  shell: "set -o pipefail; yes | pacman -S {{ packages__pipewire | join(' ') }}"
+  register: pipewire
+  changed_when: "{{ ' installing' in pipewire.stdout }}"

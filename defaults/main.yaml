@@ -3,7 +3,6 @@
 packages__pacman_conf:
   options:
     HoldPkg: pacman glibc
-    XferCommand: /usr/bin/curl -L -C - -f -o %o %u
     Architecture: auto
     Color:
     CheckSpace:
@@ -50,6 +49,16 @@ packages__gpu_nvidia:
   - nvidia-utils
   - lib32-nvidia-utils
   - nvidia-settings
+packages__gpu_generic:
+  - xf86-video-vesa
+  - mesa
+  - lib32-mesa
+
+packages__pipewire:
+  - pipewire
+  - pipewire-alsa
+  - pipewire-pulse
+  - pipewire-jack
 
 packages__pkgs:
   # Console tools
@@ -83,6 +92,8 @@ packages__pkgs:
   - keepassxc
   - ansible
   - ansible-lint
+  - yamllint
+  - shellcheck
   - aws-cli
   - jq
   - iperf3
@@ -100,9 +111,10 @@ packages__pkgs:
   - python-hpilo
   - python-jmespath
   - python-ntlm-auth
-  - python-pyyaml
+  - python-yaml
   - python-pykerberos
   - python-pytest-testinfra
+  - python-ldap
 
   # dev
   - git-cola
@@ -129,10 +141,7 @@ packages__pkgs:
   - qt5-styleplugins
 
   # Audio
-  - pipewire
-  - pipewire-pulse
-  - pipewire-jack
-  - helvum
+  # - helvum
   - spotify
 
   # Media

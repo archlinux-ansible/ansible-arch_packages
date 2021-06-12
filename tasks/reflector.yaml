@@ -6,6 +6,7 @@
     state: present
 
 - name: Run reflector
+  # yamllint disable-line rule:command-instead-of-shell
   shell: "reflector {{ packages__reflector_args }}"
   changed_when: no
   become: yes

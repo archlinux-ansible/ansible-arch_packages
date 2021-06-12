@@ -9,3 +9,8 @@
     mode: '0644'
   become: yes
   become_user: root
+
+- name: Pull in multilib
+  pacman:
+    update_cache: yes
+    upgrade: yes
