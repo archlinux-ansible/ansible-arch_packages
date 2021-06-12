@@ -113,18 +113,25 @@ packages__pkgs:
   - python-ntlm-auth
   - python-yaml
   - python-pykerberos
+  - python-pynvim
   - python-pytest-testinfra
   - python-ldap
 
   # dev
   - git-cola
+  - git-lfs
   - meld
   - lazydocker
   - lazygit
   - cmake
   - clang
+  - lldb
+  - gdb
+  - strace
   - go
+  - rust
   - jdk-openjdk
+  - npm
 
   # WM/DE
   - chezmoi
@@ -140,6 +147,9 @@ packages__pkgs:
   - spicetify-cli
   - qt5ct
   - qt5-styleplugins
+  - themix-gui-git
+  - themix-theme-oomox-git
+  - themix-icons-suru-plus-aspromauros-git
 
   # Audio
   # - helvum

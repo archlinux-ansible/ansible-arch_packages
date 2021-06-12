@@ -36,6 +36,15 @@
   become: yes
   become_user: aurbuilder
 
+# Hotfix for this broken PKGBUILD
+# https://aur.archlinux.org/packages/sddm-theme-aerial-git/#comment-739146
+- name: Fix SDDM theme permissions
+  file:
+    name: /usr/share/sddm/themes/aerial
+    owner: root
+    group: root
+    mode: '0755'
+
 # This is horribly hacky, but --noconfirm auto-fails
 - name: Install pipewire
   # yamllint disable-line rule:command-instead-of-shell
