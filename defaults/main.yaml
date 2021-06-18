@@ -55,7 +55,6 @@ packages__gpu_generic:
   - lib32-mesa
 
 packages__pipewire:
-  - pipewire
   - pipewire-alsa
   - pipewire-pulse
   - pipewire-jack

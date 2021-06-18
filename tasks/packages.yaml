@@ -33,6 +33,9 @@
   aur:
     name: "{{ packages__pkgs }}"
     state: present
+    # Hangs importing GPG keys, if this is not specified
+    use: yay
+    extra_args: --mflags --skipinteg
   become: yes
   become_user: aurbuilder
 
@@ -48,6 +51,6 @@
 # This is horribly hacky, but --noconfirm auto-fails
 - name: Install pipewire
   # yamllint disable-line rule:command-instead-of-shell
-  shell: "set -o pipefail; yes | pacman -S {{ packages__pipewire | join(' ') }}"
+  shell: "yes | pacman -S {{ packages__pipewire | join(' ') }}"
   register: pipewire
-  changed_when: "{{ ' installing' in pipewire.stdout }}"
+  changed_when: "' installing' in pipewire.stdout"
