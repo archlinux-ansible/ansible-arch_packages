@@ -62,6 +62,7 @@ packages__pipewire:
 packages__pkgs:
   # Console tools
   - git
+  - github-cli
   - ncdu
   - neovim
   - neovim-plug
@@ -78,6 +79,29 @@ packages__pkgs:
   - bash-completion
   - zsh-completions
   - onefetch
+  - sysstat
+  - nnn
+  - rclone
+  - mtpfs
+
+  # net
+  - networkmanager
+  - network-manager-applet
+  - openconnect
+  - openvpn
+  - wireguard
+  - networkmanager-openconnect
+  - networkmanager-openvpn
+  - iperf3
+  - inetutils
+  # Needed for tools
+  - bind
+  - dnsmasq
+  - whois
+  - nmap
+  - openbsd-netcat
+  - wireshark-qt
+  - wget
 
   # sys
   - docker
@@ -101,6 +125,11 @@ packages__pkgs:
   - terraform
   - pigz
   - pwgen
+  - rsync
+  - zip
+  - unzip
+  - unrar
+  - unarchiver
 
   # libs
   - python-black
