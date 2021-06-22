@@ -17,6 +17,9 @@ packages__pacman_conf:
     Include: /etc/pacman.d/mirrorlist
   multilib:
     Include: /etc/pacman.d/mirrorlist
+packages__gpg_keyserver: keyserver.ubuntu.com
+packages__gpg_conf: |
+  keyserver {{ packages__gpg_keyserver }}
 
 packages__reflector: yes
 packages__reflector_args: >-

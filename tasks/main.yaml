@@ -1,14 +1,17 @@
 ---
 
-# Run this first to populate mirror lists
+
+# Run these first
 # Otherwise packages will fail to download
 - name: Get best mirrors
   include_tasks: reflector.yaml
   when:
     - packages__reflector
 
-# This step sets pacman to use the mirror lists
-# populated by reflector. Needs to run after
+- name: Set GPG config
+  include_tasks: gpg.yaml
+
+# This needs to run after reflector
 - name: Configure pacman
   include_tasks: pacman_conf.yaml
 

@@ -1,0 +1,20 @@
+---
+
+# Set the GPG keyserver
+# The default is unreliable
+# Can cause pkgs to fail to install
+- name: Get User homedir
+  setup:
+  become: yes
+  become_user: aurbuilder
+
+- name: Set GPG Keyserver
+  copy:
+    dest: "{{ ansible_user_dir }}/.gnupg/gpg.conf"
+    content: "{{ packages__gpg_conf }}"
+  become: yes
+  become_user: aurbuilder
+
+# Avoid using the wrong facts later
+- name: Gather facts again
+  setup:
