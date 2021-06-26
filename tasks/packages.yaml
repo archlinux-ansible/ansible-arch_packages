@@ -32,6 +32,7 @@
 - name: Run nvidia-xconfig
   shell: "nvidia-xconfig {{ packages__nvidia_xconfig_args | default('') }}"
   changed_when: no
+  when: gpu == 'nvidia'
 
 - name: Install packages
   aur:
