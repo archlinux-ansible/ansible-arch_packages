@@ -8,6 +8,14 @@
   become: yes
   become_user: aurbuilder
 
+- name: Create .gnupg directory
+  file:
+    path: "{{ ansible_user_dir }}/.gnupg"
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: aurbuilder
+
 - name: Set GPG Keyserver
   copy:
     dest: "{{ ansible_user_dir }}/.gnupg/gpg.conf"
