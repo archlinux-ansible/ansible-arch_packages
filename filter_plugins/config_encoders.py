@@ -15,9 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with CEF.  If not, see <http://www.gnu.org/licenses/>.
 
-# Modified by aw1cks
-# Pending PR: https://github.com/jtyr/ansible-config_encoder_filters/pull/16
-
 """
 Config Encoder Filters
 
@@ -411,11 +408,12 @@ def encode_ini(
                 item = '""'
 
             if item is not None:
-                rv += "%s%s%s%s%s%s\n" % (
-                    indent, prop, delimiter, quote, _escape(item, quote),
-                    quote)
-            else:
-                rv += "%s%s\n" % (indent, prop)
+                if item == "!!!null":
+                    rv += "%s%s\n" % (indent, prop)
+                else:
+                    rv += "%s%s%s%s%s%s\n" % (
+                        indent, prop, delimiter, quote, _escape(item, quote),
+                        quote)
 
     # Then process all sections
     for section, props in sorted(data.items()):

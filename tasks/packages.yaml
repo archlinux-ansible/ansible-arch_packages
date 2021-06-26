@@ -29,6 +29,10 @@
     name: "{{ packages__xorg }}"
     state: present
 
+- name: Run nvidia-xconfig
+  shell: "nvidia-xconfig {{ packages__nvidia_xconfig_args | default('') }}"
+  changed_when: no
+
 - name: Install packages
   aur:
     name: "{{ packages__pkgs }}"

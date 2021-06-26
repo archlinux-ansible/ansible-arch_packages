@@ -4,8 +4,8 @@ packages__pacman_conf:
   options:
     HoldPkg: pacman glibc
     Architecture: auto
-    Color:
-    CheckSpace:
+    Color: '!!!null'
+    CheckSpace: '!!!null'
     ParallelDownloads: 5
     SigLevel: Required DatabaseOptional
     LocalFileSigLevel: Optional
@@ -165,6 +165,7 @@ packages__pkgs:
   - npm
 
   # WM/DE
+  - arandr
   - chezmoi
   - sddm
   - sddm-theme-aerial-git
@@ -182,6 +183,10 @@ packages__pkgs:
   - themix-theme-oomox-git
   - themix-icons-suru-plus-aspromauros-git
   - vivid
+
+  # Fonts
+  - nerd-fonts-iosevka
+  - otf-san-francisco
 
   # Audio
   # - helvum
