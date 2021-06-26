@@ -170,6 +170,8 @@ packages__pkgs:
   - sddm
   - sddm-theme-aerial-git
   - spectrwm
+  - suru-plus-dark-git
+  - leafpad
   - picom-tryone-git
   - dunst
   - xlockmore
@@ -181,7 +183,6 @@ packages__pkgs:
   - qt5-styleplugins
   - themix-gui-git
   - themix-theme-oomox-git
-  - themix-icons-suru-plus-aspromauros-git
   - vivid
 
   # Fonts
@@ -189,7 +190,8 @@ packages__pkgs:
   - otf-san-francisco
 
   # Audio
-  # - helvum
+  - helvum
+  - pavucontrol
   - spotify
 
   # Media
