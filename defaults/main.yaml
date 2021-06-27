@@ -66,6 +66,7 @@ packages__pkgs:
   # Console tools
   - git
   - github-cli
+  - gitlab-glab
   - ncdu
   - neovim
   - neovim-plug
@@ -86,6 +87,9 @@ packages__pkgs:
   - nnn
   - rclone
   - mtpfs
+  - repo
+  - ripgrep
+  - bat
 
   # net
   - networkmanager
