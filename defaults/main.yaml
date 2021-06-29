@@ -74,6 +74,8 @@ packages__pkgs:
   - github-cli
   - gitlab-glab
   - htop
+  - man-pages
+  - mandoc
   - mtpfs
   - ncdu
   - neofetch
@@ -85,6 +87,7 @@ packages__pkgs:
   - rclone
   - repo
   - ripgrep
+  - rsync
   - starship
   - sysstat
   - tig
@@ -104,6 +107,7 @@ packages__pkgs:
   - nmap
   - openbsd-netcat
   - openconnect
+  - openssh
   - openvpn
   - whois
   - wget
