@@ -172,6 +172,8 @@ packages__pkgs:
   - lldb
   - meld
   - npm
+  - python
+  - python-pip
   - rust
   - strace
 
