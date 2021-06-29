@@ -151,12 +151,13 @@ packages__pkgs:
   - python-gitlab
   - python-hpilo
   - python-jmespath
+  - python-ldap
   - python-ntlm-auth
   - python-pykerberos
   - python-pynvim
   - python-pytest-testinfra
   - python-pywinrm
-  - python-ldap
+  - python-twine
   - python-yaml
 
   # dev
