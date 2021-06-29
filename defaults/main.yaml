@@ -196,6 +196,7 @@ packages__pkgs:
   - themix-icons-suru-plus-git
   - themix-theme-oomox-git
   - vivid
+  - xclip
   - xlockmore
 
   # Fonts
