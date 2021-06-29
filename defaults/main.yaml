@@ -202,8 +202,8 @@ packages__pkgs:
   - ttf-google-fonts-typewolf
 
   # Audio
-  - pavucontrol
   - helvum
+  - pavucontrol
   - spotify
 
   # Media
@@ -212,13 +212,13 @@ packages__pkgs:
   - firefox
   - flameshot
   - google-chrome
+  - mpv
+  - mumble
+  - obs-studio
   - playerctl
   - scrot
   - steam
   - teamspeak3
-  - mpv
-  - mumble
-  - obs-studio
   - texlive-most
   - youtube-dl
   - zathura
