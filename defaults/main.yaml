@@ -155,6 +155,7 @@ packages__pkgs:
   - python-ntlm-auth
   - python-pykerberos
   - python-pynvim
+  - python-pypi2pkgbuild
   - python-pytest-testinfra
   - python-pywinrm
   - python-twine
