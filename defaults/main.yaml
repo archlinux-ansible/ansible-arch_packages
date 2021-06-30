@@ -200,6 +200,7 @@ packages__pkgs:
   - otf-san-francisco
   - ttf-dejavu
   - ttf-google-fonts-typewolf
+  - ttf-ms-win10-auto
 
   # Audio
   - helvum
