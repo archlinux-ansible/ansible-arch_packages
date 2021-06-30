@@ -226,6 +226,7 @@ packages__pkgs:
   - mumble
   - obs-studio
   - playerctl
+  - pyslam
   - scrot
   - steam
   - teamspeak3
