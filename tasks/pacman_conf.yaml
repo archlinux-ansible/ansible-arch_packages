@@ -12,11 +12,6 @@
 
 # Use lineinfile to modify makepkg conf
 # To avoid not catching upstream changes
-# Ensure pigz present first to avoid problems when installing packages later
-- name: Install pigz
-  pacman:
-    name: pigz
-    state: present
 - name: Update makepkg config
   block:
     - name: Set MAKEFLAGS to nproc-1

@@ -1,8 +1,12 @@
 ---
 
-- name: Install lspci
+# pciutils needed to detect GPU
+# pigz needed for makepkg
+- name: Install prerequisites
   pacman:
-    name: pciutils
+    name:
+      - pciutils
+      - pigz
     state: present
 
 - name: Look for GPUs on PCIe bus
