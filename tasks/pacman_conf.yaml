@@ -10,6 +10,36 @@
   become: yes
   become_user: root
 
+# Use lineinfile to modify makepkg conf
+# To avoid not catching upstream changes
+# Ensure pigz present first to avoid problems when installing packages later
+- name: Install pigz
+  pacman:
+    name: pigz
+    state: present
+- name: Update makepkg config
+  block:
+    - name: Set MAKEFLAGS to nproc-1
+      lineinfile:
+        path: /etc/makepkg.conf
+        regexp: '^#MAKEFLAGS='
+        line: 'MAKEFLAGS="-j$(nproc --ignore=1)"'
+    - name: Use pigz for gz archives
+      lineinfile:
+        path: /etc/makepkg.conf
+        regexp: '^COMPRESSGZ='
+        line: 'COMPRESSGZ=(pigz -c -f -n)'
+    - name: Make zstd parallel
+      lineinfile:
+        path: /etc/makepkg.conf
+        regexp: '^COMPRESSZST='
+        line: 'COMPRESSZST=(zstd -c -z -q -T0 -)'
+    - name: Make XZ parallel
+      lineinfile:
+        path: /etc/makepkg.conf
+        regexp: '^COMPRESSXZ='
+        line: 'COMPRESSXZ=(xz -c -z -T0 -)'
+
 - name: Pull in multilib
   pacman:
     update_cache: yes
