@@ -48,9 +48,11 @@ packages__gpu_intel:
   - lib32-mesa
   - mesa
   - xf86-video-intel
+# Set this to 'nvidia' if you prefer not to use DKMS
+packages__gpu_nvidia_driver: nvidia-dkms
 packages__gpu_nvidia:
   - lib32-nvidia-utils
-  - nvidia-dkms
+  - "{{ packages__gpu_nvidia_driver }}"
   - nvidia-utils
   - nvidia-settings
 packages__gpu_generic:

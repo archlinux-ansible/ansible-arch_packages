@@ -19,6 +19,15 @@
         else 'nvidia' if 'NVIDIA' in gpus_lspci.stdout) | default('generic')
       }}
 
+# Check if nvidia driver already installed for idempotency
+# Don't run nvidia-xconfig if drivers are already installed
+# To avoid overwriting user config
+- name: Get list of installed packages
+  command: pacman -Qq
+  changed_when: no
+  register: installed_packages
+  when: gpu == 'nvidia'
+
 - name: Install GPU drivers
   pacman:
     name: "{{ lookup('vars', 'packages__gpu_' + gpu) }}"
@@ -32,7 +41,9 @@
 - name: Run nvidia-xconfig
   shell: "nvidia-xconfig {{ packages__nvidia_xconfig_args | default('') }}"
   changed_when: no
-  when: gpu == 'nvidia'
+  when: 
+    - gpu == 'nvidia'
+    - packages__gpu_nvidia_driver in installed_packages.stdout_lines
 
 - name: Install packages
   aur:
