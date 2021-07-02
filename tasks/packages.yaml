@@ -47,7 +47,7 @@
   changed_when: no
   when: 
     - gpu == 'nvidia'
-    - packages__gpu_nvidia_driver in installed_packages.stdout_lines
+    - packages__gpu_nvidia_driver not in installed_packages.stdout_lines
 
 - name: Install packages
   aur:
