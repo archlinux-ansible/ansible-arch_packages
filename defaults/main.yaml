@@ -165,6 +165,8 @@ packages__pkgs:
   - python-pywinrm
   - python-twine
   - python-yaml
+  # Python2
+  - python2-nose
 
   # dev
   - clang
@@ -223,6 +225,7 @@ packages__pkgs:
 
   # Media
   - chromium
+  - csgo-handler
   - discord
   - firefox
   - flameshot
