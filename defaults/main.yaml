@@ -123,6 +123,7 @@ packages__pkgs:
   - docker
   - docker-compose
   - efibootmgr
+  - freerdp
   - helm
   - jq
   - keepassxc
