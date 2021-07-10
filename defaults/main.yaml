@@ -130,15 +130,17 @@ packages__pkgs:
   - kubectl
   - kubeadm
   - kubectx
-  - shellcheck
+  - mlocate
   - net-snmp
   - ntfs-3g
   - packer
+  - pacman-contrib
   - pigz
   - pwgen
   - remmina
   - rsync
   - skopeo
+  - shellcheck
   - terraform
   - terragrunt
   - unzip
