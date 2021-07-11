@@ -117,6 +117,8 @@ packages__pkgs:
   - wireshark-qt
 
   # sys
+  - android-tools
+  - android-udev
   - ansible
   - ansible-lint
   - aws-cli
