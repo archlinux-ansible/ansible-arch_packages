@@ -67,6 +67,7 @@ packages__pipewire:
 
 packages__pkgs:
   # Console tools
+  - android-file-transfer
   - antibody
   - bat
   - bash-completion
@@ -78,7 +79,6 @@ packages__pkgs:
   - htop
   - man-pages
   - mandoc
-  - mtpfs
   - ncdu
   - neofetch
   - neovim
