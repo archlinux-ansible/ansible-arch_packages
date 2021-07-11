@@ -213,7 +213,10 @@ packages__pkgs:
   - xlockmore
 
   # Fonts
+  - adobe-source-han-sans-otc-fonts
+  - adobe-source-han-serif-otc-fonts
   - nerd-fonts-iosevka
+  - noto-fonts-cjk
   - noto-fonts-emoji
   - otf-san-francisco
   - ttf-dejavu
