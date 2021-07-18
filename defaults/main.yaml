@@ -187,6 +187,7 @@ packages__pkgs:
   - python-pip
   - rust
   - strace
+  - yarn
 
   # WM/DE
   - alacritty
