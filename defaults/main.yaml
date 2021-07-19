@@ -153,6 +153,7 @@ packages__pkgs:
 
   # libs
   - python-black
+  - python-coverage
   - python-dnspython
   - python-flask
   - python-gitlab
