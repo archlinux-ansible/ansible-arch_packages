@@ -248,3 +248,4 @@ packages__pkgs:
   - texlive-most
   - youtube-dl
   - zathura
+  - zathura-pdf-mupdf
