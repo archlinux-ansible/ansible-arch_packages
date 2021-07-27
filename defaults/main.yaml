@@ -132,6 +132,7 @@ packages__pkgs:
   - kubectl
   - kubeadm
   - kubectx
+  - libvncserver
   - mlocate
   - net-snmp
   - ntfs-3g
