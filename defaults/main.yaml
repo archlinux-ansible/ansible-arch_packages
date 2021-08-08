@@ -231,21 +231,29 @@ packages__pkgs:
   - pavucontrol
   - spotify
 
+  # Gaming
+  - csgo-handler
+  - gvfs
+  - lib32-vkd3d
+  - lutris
+  - minecraft
+  - mumble
+  - pyslam
+  - steam
+  - teamspeak3
+  - vkd3d
+  - wine
+
   # Media
   - chromium
-  - csgo-handler
   - discord
   - firefox
   - flameshot
   - google-chrome
   - mpv
-  - mumble
   - obs-studio
   - playerctl
-  - pyslam
   - scrot
-  - steam
-  - teamspeak3
   - texlive-most
   - youtube-dl
   - zathura
