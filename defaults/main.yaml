@@ -236,7 +236,7 @@ packages__pkgs:
   - gvfs
   - lib32-vkd3d
   - lutris
-  - minecraft
+  - minecraft-launcher
   - mumble
   - pyslam
   - steam
