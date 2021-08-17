@@ -129,6 +129,8 @@ packages__pkgs:
   - helm
   - jq
   - keepassxc
+  - k3d
+  - kind
   - kubectl
   - kubeadm
   - kubectx
@@ -256,5 +258,6 @@ packages__pkgs:
   - scrot
   - texlive-most
   - youtube-dl
+  - yt-dlp
   - zathura
   - zathura-pdf-mupdf
