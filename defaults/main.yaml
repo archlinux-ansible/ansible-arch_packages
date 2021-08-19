@@ -129,7 +129,6 @@ packages__pkgs:
   - helm
   - jq
   - keepassxc
-  - k3d
   - kind
   - kubectl
   - kubeadm
@@ -143,6 +142,7 @@ packages__pkgs:
   - pigz
   - pwgen
   - remmina
+  - rancher-k3d
   - rsync
   - skopeo
   - shellcheck
