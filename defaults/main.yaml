@@ -151,6 +151,7 @@ packages__pkgs:
   - unzip
   - unrar
   - unarchiver
+  - woeusb-ng
   - yamllint
   - zip
 
