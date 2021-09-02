@@ -195,6 +195,10 @@ packages__pkgs:
   - strace
   - yarn
 
+  # emulation / virt
+  - edk2-ovmf
+  - qemu
+
   # WM/DE
   - alacritty
   - arandr
