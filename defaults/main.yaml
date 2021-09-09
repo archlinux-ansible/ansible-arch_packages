@@ -122,6 +122,7 @@ packages__pkgs:
   - ansible
   - ansible-lint
   - aws-cli
+  - dmidecode
   - docker
   - docker-compose
   - efibootmgr
