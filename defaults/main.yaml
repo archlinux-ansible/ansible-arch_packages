@@ -76,16 +76,16 @@ packages__pkgs:
   - git
   - github-cli
   - gitlab-glab
+  - gopass
   - htop
   - man-pages
   - mandoc
   - ncdu
   - neofetch
   - neovim
-  - neovim-plug
+  - neovim-packer-git
   - nnn
   - onefetch
-  - pass
   - rclone
   - repo
   - ripgrep
@@ -100,6 +100,7 @@ packages__pkgs:
   # net
   - bind # Needed for tools
   - dnsmasq
+  - dog
   - iperf3
   - inetutils
   - network-manager-applet
