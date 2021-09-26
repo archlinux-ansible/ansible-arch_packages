@@ -97,6 +97,28 @@ packages__pkgs:
   - zsh
   - zsh-completions
 
+  # LSP
+  - ansible-language-server
+  - bash-language-server
+  - ccls
+  - cmake-language-server
+  - dockerfile-language-server
+  - gopls
+  #- groovy-language-server-git
+  - haskell-language-server
+  - java-language-server-git
+  - omnisharp-roslyn-bin
+  #- perl-perl-languageserver
+  - pyright
+  - ruby-solargraph
+  - rust-analyzer
+  - sqls
+  - terraform-ls
+  - yaml-language-server
+  - vscode-css-languageserver
+  - vscode-html-languageserver
+  - vscode-json-languageserver
+
   # Containers
   - cni-plugins
   - containerd
