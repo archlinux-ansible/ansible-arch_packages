@@ -210,7 +210,7 @@ packages__pkgs:
   - feh
   - glava
   - leafpad
-  - picom-tryone-git
+  - picom-git
   - plymouth-git
   - qt5ct
   - qt5-styleplugins
