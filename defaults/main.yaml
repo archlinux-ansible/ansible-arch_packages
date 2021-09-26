@@ -97,6 +97,13 @@ packages__pkgs:
   - zsh
   - zsh-completions
 
+  # Containers
+  - cni-plugins
+  - containerd
+  - nerdctl-bin
+  - rancher-k3d
+  - skopeo
+
   # net
   - bind # Needed for tools
   - dnsmasq
@@ -124,8 +131,6 @@ packages__pkgs:
   - ansible-lint
   - aws-cli
   - dmidecode
-  - docker
-  - docker-compose
   - efibootmgr
   - freerdp
   - helm
@@ -144,9 +149,7 @@ packages__pkgs:
   - pigz
   - pwgen
   - remmina
-  - rancher-k3d
   - rsync
-  - skopeo
   - shellcheck
   - terraform
   - terragrunt
@@ -185,7 +188,6 @@ packages__pkgs:
   - gdb
   - go
   - jdk-openjdk
-  - lazydocker
   - lazygit
   - lldb
   - meld
@@ -202,7 +204,6 @@ packages__pkgs:
   - qemu
 
   # WM/DE
-  - alacritty
   - arandr
   - chezmoi
   - dunst
@@ -222,6 +223,7 @@ packages__pkgs:
   - themix-icons-suru-plus-git
   - themix-theme-oomox-git
   - vivid
+  - wezterm-nightly-bin
   - xclip
   - xlockmore
 
