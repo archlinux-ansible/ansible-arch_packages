@@ -2,12 +2,21 @@
 
 # pciutils needed to detect GPU
 # pigz needed for makepkg
+# rustup needed for rust toolchain
 - name: Install prerequisites
   pacman:
     name:
       - pciutils
       - pigz
+      - rustup
     state: present
+
+- name: Configure rust
+  command: rustup default stable
+  register: rustup
+  changed_when: "' unchanged ' not in rustup.stdout"
+  become: yes
+  become_user: aurbuilder
 
 - name: Look for GPUs on PCIe bus
   shell: "set -o pipefail; lspci -v -s $(lspci | grep ' VGA ' | cut -d' ' -f 1)"

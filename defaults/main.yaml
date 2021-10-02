@@ -71,6 +71,8 @@ packages__pkgs:
   - antibody
   - bat
   - bash-completion
+  - bpytop
+  - cbonsai
   - fzf
   - fzf-extras
   - git
@@ -83,8 +85,8 @@ packages__pkgs:
   - ncdu
   - neofetch
   - neovim
-  - neovim-packer-git
   - nnn
+  - nvim-packer-git
   - onefetch
   - rclone
   - repo
@@ -107,10 +109,11 @@ packages__pkgs:
   #- groovy-language-server-git
   - haskell-language-server
   - java-language-server-git
+  - lua-language-server
   - omnisharp-roslyn-bin
   #- perl-perl-languageserver
   - pyright
-  - ruby-solargraph
+  #- ruby-solargraph
   - rust-analyzer
   - sqls
   - terraform-ls
@@ -122,8 +125,13 @@ packages__pkgs:
   # Containers
   - cni-plugins
   - containerd
+  - helm
+  - kind
+  - kubectl
+  - kubeadm
+  - kubectx
   - nerdctl-bin
-  - rancher-k3d
+  - rancher-k3d-bin
   - skopeo
 
   # net
@@ -155,13 +163,8 @@ packages__pkgs:
   - dmidecode
   - efibootmgr
   - freerdp
-  - helm
   - jq
   - keepassxc
-  - kind
-  - kubectl
-  - kubeadm
-  - kubectx
   - libvncserver
   - mlocate
   - net-snmp
@@ -223,29 +226,32 @@ packages__pkgs:
 
   # emulation / virt
   - edk2-ovmf
-  - qemu
+  - qemu-headless
 
   # WM/DE
   - arandr
   - chezmoi
   - dunst
+  - eww-git
   - feh
   - glava
   - leafpad
+  - leftwm-git
   - picom-git
   - plymouth-git
   - qt5ct
   - qt5-styleplugins
   - sddm
   - sddm-theme-aerial-git
-  - spectrwm
-  - spicetify-cli
+  # - spectrwm
+  #- spicetify-cli
   - themix-gui-git
   - themix-plugin-base16-git
   - themix-icons-suru-plus-git
   - themix-theme-oomox-git
   - vivid
   - wezterm-nightly-bin
+  - wmctrl
   - xclip
   - xlockmore
 
