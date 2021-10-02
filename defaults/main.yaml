@@ -265,6 +265,7 @@ packages__pkgs:
   - ttf-google-fonts-typewolf
   - ttf-iosevka-nerd
   - ttf-ms-win10-auto
+  - ttf-twemoji-color
 
   # Audio
   - helvum
