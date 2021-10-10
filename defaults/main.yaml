@@ -232,6 +232,7 @@ packages__pkgs:
   # WM/DE
   - arandr
   - chezmoi
+  - clipto-bin
   - dunst
   - eww-git
   - feh
@@ -244,7 +245,6 @@ packages__pkgs:
   - qt5-styleplugins
   - sddm
   - sddm-theme-aerial-git
-  - simplenote
   # - spectrwm
   #- spicetify-cli
   - themix-gui-git
