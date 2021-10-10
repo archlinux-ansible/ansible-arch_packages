@@ -117,6 +117,7 @@ packages__pkgs:
   - rust-analyzer
   - sqls
   - terraform-ls
+  - typescript # Requirement for LSP Servers
   - yaml-language-server
   - vscode-css-languageserver
   - vscode-html-languageserver
@@ -243,6 +244,7 @@ packages__pkgs:
   - qt5-styleplugins
   - sddm
   - sddm-theme-aerial-git
+  - simplenote
   # - spectrwm
   #- spicetify-cli
   - themix-gui-git
@@ -264,6 +266,7 @@ packages__pkgs:
   - ttf-dejavu
   - ttf-google-fonts-typewolf
   - ttf-iosevka-nerd
+  - ttf-joypixels
   - ttf-ms-win10-auto
   - ttf-twemoji-color
 
