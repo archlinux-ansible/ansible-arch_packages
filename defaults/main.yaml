@@ -196,6 +196,7 @@ packages__pkgs:
   - python-jmespath
   - python-ldap
   - python-ntlm-auth
+  - python-openstackclient
   - python-pykerberos
   - python-pynvim
   - python-pypi2pkgbuild
