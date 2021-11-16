@@ -173,6 +173,7 @@ packages__pkgs:
   - packer
   - packer-provisioner-goss
   - pacman-contrib
+  - pbzip2
   - pigz
   - pwgen
   - remmina
