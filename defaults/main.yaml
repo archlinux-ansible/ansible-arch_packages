@@ -126,6 +126,7 @@ packages__pkgs:
   # Containers
   - cni-plugins
   - containerd
+  - ct
   - helm
   - kind
   - kubectl
