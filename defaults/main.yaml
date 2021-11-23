@@ -172,6 +172,7 @@ packages__pkgs:
   - mlocate
   - net-snmp
   - ntfs-3g
+  - oci-cli
   - packer
   - packer-provisioner-goss
   - pacman-contrib
