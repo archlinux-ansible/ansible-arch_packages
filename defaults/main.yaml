@@ -307,6 +307,7 @@ packages__pkgs:
   - playerctl
   - scrot
   - texlive-most
+  - thunderbird
   - youtube-dl
   - yt-dlp
   - zathura
