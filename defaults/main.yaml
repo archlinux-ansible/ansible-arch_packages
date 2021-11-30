@@ -305,6 +305,7 @@ packages__pkgs:
   - mpv
   - obs-studio
   - playerctl
+  - rawtherapee
   - scrot
   - texlive-most
   - thunderbird
