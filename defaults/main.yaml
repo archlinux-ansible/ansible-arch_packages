@@ -270,7 +270,7 @@ packages__pkgs:
   - adobe-source-han-serif-otc-fonts
   - noto-fonts-cjk
   - noto-fonts-emoji
-  - otf-san-francisco
+  - otf-apple-sf-pro
   - ttf-dejavu
   - ttf-google-fonts-typewolf
   - ttf-iosevka-nerd
