@@ -151,6 +151,7 @@ packages__pkgs:
   - openconnect
   - openssh
   - openvpn
+  - sshfs
   - whois
   - wget
   - wireguard
@@ -210,6 +211,9 @@ packages__pkgs:
   - python-pywinrm
   - python-twine
   - python-yaml
+  # Needed for syncplay
+  - python-service-identity
+  - python-pyside2
   # Python2
   - python2-nose
 
@@ -297,6 +301,7 @@ packages__pkgs:
   - wine
 
   # Media
+  - calibre
   - chromium
   - discord
   - firefox
