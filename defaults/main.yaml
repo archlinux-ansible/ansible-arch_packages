@@ -237,6 +237,7 @@ packages__pkgs:
   - yarn
 
   # emulation / virt
+  - binfmt-qemu-all-arch
   - edk2-ovmf
   - qemu-headless
   - qemu-headless-arch-extra
