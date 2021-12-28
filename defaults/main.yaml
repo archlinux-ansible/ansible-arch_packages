@@ -106,18 +106,18 @@ packages__pkgs:
   - cmake-language-server
   - dockerfile-language-server
   - gopls
-  #- groovy-language-server-git
+ # - groovy-language-server-git
   - haskell-language-server
   - java-language-server-git
   - lua-language-server
   - omnisharp-roslyn-bin
-  #- perl-perl-languageserver
+ # - perl-perl-languageserver
   - pyright
-  #- ruby-solargraph
+ # - ruby-solargraph
   - rust-analyzer
   - sqls
   - terraform-ls
-  - typescript # Requirement for LSP Servers
+  - typescript  # Requirement for LSP Servers
   - yaml-language-server
   - vscode-css-languageserver
   - vscode-html-languageserver
@@ -137,9 +137,10 @@ packages__pkgs:
   - skopeo
 
   # net
-  - bind # Needed for tools
+  - bind  # Needed for tools
   - dnsmasq
   - dog
+  - httpstat-go
   - iperf3
   - inetutils
   - network-manager-applet
@@ -163,6 +164,7 @@ packages__pkgs:
   - ansible
   - ansible-lint
   - aws-cli
+  - ddcutil
   - dmidecode
   - efibootmgr
   - freerdp
@@ -170,6 +172,7 @@ packages__pkgs:
   - jq
   - keepassxc
   - libvncserver
+  - lm_sensors
   - mlocate
   - net-snmp
   - ntfs-3g
@@ -199,6 +202,7 @@ packages__pkgs:
   - python-flask
   - python-gitlab
   - python-hpilo
+  - python-isort
   - python-jmespath
   - python-ldap
   - python-ntlm-auth
@@ -232,6 +236,7 @@ packages__pkgs:
   - npm
   - python
   - python-pip
+  - python-pipx
   - rust
   - strace
   - yarn
@@ -258,8 +263,6 @@ packages__pkgs:
   - qt5-styleplugins
   - sddm
   - sddm-theme-aerial-git
-  # - spectrwm
-  #- spicetify-cli
   - themix-gui-git
   - themix-plugin-base16-git
   - themix-icons-suru-plus-git
@@ -286,7 +289,14 @@ packages__pkgs:
   # Audio
   - helvum
   - pavucontrol
-  - spotify
+  - spotify-tui
+  - spotifyd
+
+  # VoIP / Communication
+  - mumble
+  - slack
+  - slack-term
+  - teamspeak3
 
   # Gaming
   - csgo-handler
@@ -294,10 +304,8 @@ packages__pkgs:
   - lib32-vkd3d
   - lutris
   - minecraft-launcher
-  - mumble
   - pyslam
   - steam
-  - teamspeak3
   - vkd3d
   - wine
 
