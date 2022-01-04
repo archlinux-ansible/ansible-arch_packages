@@ -67,6 +67,7 @@ packages__pipewire:
 
 packages__pkgs:
   # Console tools
+  - act
   - android-file-transfer
   - antibody
   - bat
