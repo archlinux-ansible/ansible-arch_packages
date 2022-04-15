@@ -69,18 +69,25 @@ packages__pkgs:
   # Console tools
   - act
   - android-file-transfer
+  - ansible
+  - ansible-lint
   - antibody
+  - aws-cli
   - bat
   - bash-completion
   - bpytop
   - cbonsai
+  - dmidecode
   - fzf
   - fzf-extras
   - git
   - github-cli
-  - gitlab-glab
+  - glab
   - gopass
+  - hdparm
   - htop
+  - ipcalc
+  - jq
   - man-pages
   - mandoc
   - ncdu
@@ -88,15 +95,24 @@ packages__pkgs:
   - neovim
   - nnn
   - nvim-packer-git
+  - oci-cli
   - onefetch
+  - packer
+  - packer-provisioner-goss
+  - pacman-contrib
   - rclone
   - repo
   - ripgrep
   - rsync
+  - shellcheck
   - starship
   - sysstat
+  - terraform
+  - terragrunt
   - tig
   - tree
+  - woeusb-ng
+  - yamllint
   - zsh
   - zsh-completions
 
@@ -141,6 +157,7 @@ packages__pkgs:
   - bind  # Needed for tools
   - dnsmasq
   - dog
+  - grpcurl
   - httpstat-go
   - iperf3
   - inetutils
@@ -162,38 +179,23 @@ packages__pkgs:
   # sys
   - android-tools
   - android-udev
-  - ansible
-  - ansible-lint
-  - aws-cli
-  - ddcutil
-  - dmidecode
   - efibootmgr
   - freerdp
-  - ipcalc
-  - jq
+  - gddccontrol
   - keepassxc
   - lbzip2
   - libvncserver
   - lm_sensors
   - mlocate
-  - net-snmp
   - ntfs-3g
-  - oci-cli
-  - packer
-  - packer-provisioner-goss
-  - pacman-contrib
+  - net-snmp
   - pigz
+  - postgresql
   - pwgen
   - remmina
-  - rsync
-  - shellcheck
-  - terraform
-  - terragrunt
   - unzip
   - unrar
   - unarchiver
-  - woeusb-ng
-  - yamllint
   - zip
 
   # libs
@@ -295,7 +297,7 @@ packages__pkgs:
 
   # VoIP / Communication
   - mumble
-  - slack
+  - slack-desktop
   - slack-term
   - teamspeak3
 
